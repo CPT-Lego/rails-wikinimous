@@ -1,0 +1,12 @@
+<h1>List of articles</h1>
+
+<ol>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article_path(article.id) do %>
+        <%= article.title %>
+        <%= article.content %>
+      <% end %>
+    </li>
+    <% end %>
+</ol>
